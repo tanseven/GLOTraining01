@@ -3,19 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		483BA4563884449B7C4CD8F0 /* Pods_GLOTraining01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BFD57AE6ED4D483674A2FC /* Pods_GLOTraining01.framework */; };
 		87ED31BD233DFC7000467133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31BC233DFC7000467133 /* AppDelegate.swift */; };
 		87ED31BF233DFC7000467133 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31BE233DFC7000467133 /* SceneDelegate.swift */; };
 		87ED31C1233DFC7000467133 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31C0233DFC7000467133 /* ViewController.swift */; };
 		87ED31C4233DFC7000467133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87ED31C2233DFC7000467133 /* Main.storyboard */; };
 		87ED31C6233DFC7100467133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87ED31C5233DFC7100467133 /* Assets.xcassets */; };
 		87ED31C9233DFC7100467133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87ED31C7233DFC7100467133 /* LaunchScreen.storyboard */; };
+		87ED31DD233E04C300467133 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31D3233E04C300467133 /* QRCodeReader.swift */; };
+		87ED31DE233E04C300467133 /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31D4233E04C300467133 /* QRCodeReaderViewControllerDelegate.swift */; };
+		87ED31DF233E04C300467133 /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31D5233E04C300467133 /* QRCodeReaderViewContainer.swift */; };
+		87ED31E0233E04C300467133 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31D6233E04C300467133 /* QRCodeReaderViewControllerBuilder.swift */; };
+		87ED31E1233E04C300467133 /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31D7233E04C300467133 /* QRCodeReaderView.swift */; };
+		87ED31E2233E04C300467133 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31D8233E04C300467133 /* QRCodeReaderResult.swift */; };
+		87ED31E3233E04C300467133 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31D9233E04C300467133 /* SwitchCameraButton.swift */; };
+		87ED31E4233E04C300467133 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31DA233E04C300467133 /* QRCodeReaderViewController.swift */; };
+		87ED31E5233E04C300467133 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31DB233E04C300467133 /* ToggleTorchButton.swift */; };
+		87ED31E6233E04C300467133 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31DC233E04C300467133 /* ReaderOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0634BEEF99ABC9E031647724 /* Pods-GLOTraining01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLOTraining01.release.xcconfig"; path = "Target Support Files/Pods-GLOTraining01/Pods-GLOTraining01.release.xcconfig"; sourceTree = "<group>"; };
+		07CD751B57C3FEBCBDE747E6 /* Pods-GLOTraining01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLOTraining01.debug.xcconfig"; path = "Target Support Files/Pods-GLOTraining01/Pods-GLOTraining01.debug.xcconfig"; sourceTree = "<group>"; };
 		87ED31B9233DFC7000467133 /* GLOTraining01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLOTraining01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87ED31BC233DFC7000467133 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87ED31BE233DFC7000467133 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,17 @@
 		87ED31C5233DFC7100467133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87ED31C8233DFC7100467133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87ED31CA233DFC7100467133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87ED31D3233E04C300467133 /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
+		87ED31D4233E04C300467133 /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
+		87ED31D5233E04C300467133 /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
+		87ED31D6233E04C300467133 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
+		87ED31D7233E04C300467133 /* QRCodeReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderView.swift; sourceTree = "<group>"; };
+		87ED31D8233E04C300467133 /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		87ED31D9233E04C300467133 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCameraButton.swift; sourceTree = "<group>"; };
+		87ED31DA233E04C300467133 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		87ED31DB233E04C300467133 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleTorchButton.swift; sourceTree = "<group>"; };
+		87ED31DC233E04C300467133 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderOverlayView.swift; sourceTree = "<group>"; };
+		E8BFD57AE6ED4D483674A2FC /* Pods_GLOTraining01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLOTraining01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483BA4563884449B7C4CD8F0 /* Pods_GLOTraining01.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74CB8B9750B6653281439152 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8BFD57AE6ED4D483674A2FC /* Pods_GLOTraining01.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C787622D01C8C09302AACEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07CD751B57C3FEBCBDE747E6 /* Pods-GLOTraining01.debug.xcconfig */,
+				0634BEEF99ABC9E031647724 /* Pods-GLOTraining01.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		87ED31B0233DFC7000467133 = {
 			isa = PBXGroup;
 			children = (
 				87ED31BB233DFC7000467133 /* GLOTraining01 */,
 				87ED31BA233DFC7000467133 /* Products */,
+				7C787622D01C8C09302AACEF /* Pods */,
+				74CB8B9750B6653281439152 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +107,42 @@
 				87ED31C5233DFC7100467133 /* Assets.xcassets */,
 				87ED31C7233DFC7100467133 /* LaunchScreen.storyboard */,
 				87ED31CA233DFC7100467133 /* Info.plist */,
+				87ED31D0233E04C300467133 /* Library */,
 			);
 			path = GLOTraining01;
+			sourceTree = "<group>";
+		};
+		87ED31D0233E04C300467133 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				87ED31D1233E04C300467133 /* QRCodeReader */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		87ED31D1233E04C300467133 /* QRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				87ED31D2233E04C300467133 /* Sources */,
+			);
+			path = QRCodeReader;
+			sourceTree = "<group>";
+		};
+		87ED31D2233E04C300467133 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				87ED31D3233E04C300467133 /* QRCodeReader.swift */,
+				87ED31D4233E04C300467133 /* QRCodeReaderViewControllerDelegate.swift */,
+				87ED31D5233E04C300467133 /* QRCodeReaderViewContainer.swift */,
+				87ED31D6233E04C300467133 /* QRCodeReaderViewControllerBuilder.swift */,
+				87ED31D7233E04C300467133 /* QRCodeReaderView.swift */,
+				87ED31D8233E04C300467133 /* QRCodeReaderResult.swift */,
+				87ED31D9233E04C300467133 /* SwitchCameraButton.swift */,
+				87ED31DA233E04C300467133 /* QRCodeReaderViewController.swift */,
+				87ED31DB233E04C300467133 /* ToggleTorchButton.swift */,
+				87ED31DC233E04C300467133 /* ReaderOverlayView.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87ED31CD233DFC7100467133 /* Build configuration list for PBXNativeTarget "GLOTraining01" */;
 			buildPhases = (
+				5FF43EAC32DE67CF00713D53 /* [CP] Check Pods Manifest.lock */,
 				87ED31B5233DFC7000467133 /* Sources */,
 				87ED31B6233DFC7000467133 /* Frameworks */,
 				87ED31B7233DFC7000467133 /* Resources */,
+				DCDA2BBE82EE05ACB7E46FEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +213,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5FF43EAC32DE67CF00713D53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GLOTraining01-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCDA2BBE82EE05ACB7E46FEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GLOTraining01/Pods-GLOTraining01-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GLOTraining01/Pods-GLOTraining01-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GLOTraining01/Pods-GLOTraining01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		87ED31B5233DFC7000467133 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87ED31E5233E04C300467133 /* ToggleTorchButton.swift in Sources */,
+				87ED31E0233E04C300467133 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
 				87ED31C1233DFC7000467133 /* ViewController.swift in Sources */,
 				87ED31BD233DFC7000467133 /* AppDelegate.swift in Sources */,
+				87ED31DD233E04C300467133 /* QRCodeReader.swift in Sources */,
 				87ED31BF233DFC7000467133 /* SceneDelegate.swift in Sources */,
+				87ED31E1233E04C300467133 /* QRCodeReaderView.swift in Sources */,
+				87ED31E3233E04C300467133 /* SwitchCameraButton.swift in Sources */,
+				87ED31E2233E04C300467133 /* QRCodeReaderResult.swift in Sources */,
+				87ED31DE233E04C300467133 /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				87ED31E6233E04C300467133 /* ReaderOverlayView.swift in Sources */,
+				87ED31E4233E04C300467133 /* QRCodeReaderViewController.swift in Sources */,
+				87ED31DF233E04C300467133 /* QRCodeReaderViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +414,7 @@
 		};
 		87ED31CE233DFC7100467133 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CD751B57C3FEBCBDE747E6 /* Pods-GLOTraining01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +433,7 @@
 		};
 		87ED31CF233DFC7100467133 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0634BEEF99ABC9E031647724 /* Pods-GLOTraining01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
