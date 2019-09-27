@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		483BA4563884449B7C4CD8F0 /* Pods_GLOTraining01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BFD57AE6ED4D483674A2FC /* Pods_GLOTraining01.framework */; };
 		87ED31BD233DFC7000467133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31BC233DFC7000467133 /* AppDelegate.swift */; };
-		87ED31BF233DFC7000467133 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31BE233DFC7000467133 /* SceneDelegate.swift */; };
 		87ED31C1233DFC7000467133 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31C0233DFC7000467133 /* ViewController.swift */; };
 		87ED31C4233DFC7000467133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87ED31C2233DFC7000467133 /* Main.storyboard */; };
 		87ED31C6233DFC7100467133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87ED31C5233DFC7100467133 /* Assets.xcassets */; };
@@ -24,6 +23,8 @@
 		87ED31E4233E04C300467133 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31DA233E04C300467133 /* QRCodeReaderViewController.swift */; };
 		87ED31E5233E04C300467133 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31DB233E04C300467133 /* ToggleTorchButton.swift */; };
 		87ED31E6233E04C300467133 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31DC233E04C300467133 /* ReaderOverlayView.swift */; };
+		87ED31E8233E053500467133 /* ScanLotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31E7233E053500467133 /* ScanLotteryViewController.swift */; };
+		87ED31EA233E0D4500467133 /* ScanLotteryUtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED31E9233E0D4500467133 /* ScanLotteryUtilityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		87ED31DA233E04C300467133 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
 		87ED31DB233E04C300467133 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleTorchButton.swift; sourceTree = "<group>"; };
 		87ED31DC233E04C300467133 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderOverlayView.swift; sourceTree = "<group>"; };
+		87ED31E7233E053500467133 /* ScanLotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanLotteryViewController.swift; sourceTree = "<group>"; };
+		87ED31E9233E0D4500467133 /* ScanLotteryUtilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanLotteryUtilityViewController.swift; sourceTree = "<group>"; };
 		E8BFD57AE6ED4D483674A2FC /* Pods_GLOTraining01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLOTraining01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +106,8 @@
 				87ED31BC233DFC7000467133 /* AppDelegate.swift */,
 				87ED31BE233DFC7000467133 /* SceneDelegate.swift */,
 				87ED31C0233DFC7000467133 /* ViewController.swift */,
+				87ED31E7233E053500467133 /* ScanLotteryViewController.swift */,
+				87ED31E9233E0D4500467133 /* ScanLotteryUtilityViewController.swift */,
 				87ED31C2233DFC7000467133 /* Main.storyboard */,
 				87ED31C5233DFC7100467133 /* Assets.xcassets */,
 				87ED31C7233DFC7100467133 /* LaunchScreen.storyboard */,
@@ -264,11 +269,12 @@
 				87ED31E0233E04C300467133 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
 				87ED31C1233DFC7000467133 /* ViewController.swift in Sources */,
 				87ED31BD233DFC7000467133 /* AppDelegate.swift in Sources */,
+				87ED31EA233E0D4500467133 /* ScanLotteryUtilityViewController.swift in Sources */,
 				87ED31DD233E04C300467133 /* QRCodeReader.swift in Sources */,
-				87ED31BF233DFC7000467133 /* SceneDelegate.swift in Sources */,
 				87ED31E1233E04C300467133 /* QRCodeReaderView.swift in Sources */,
 				87ED31E3233E04C300467133 /* SwitchCameraButton.swift in Sources */,
 				87ED31E2233E04C300467133 /* QRCodeReaderResult.swift in Sources */,
+				87ED31E8233E053500467133 /* ScanLotteryViewController.swift in Sources */,
 				87ED31DE233E04C300467133 /* QRCodeReaderViewControllerDelegate.swift in Sources */,
 				87ED31E6233E04C300467133 /* ReaderOverlayView.swift in Sources */,
 				87ED31E4233E04C300467133 /* QRCodeReaderViewController.swift in Sources */,
@@ -420,6 +426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 542EU4SW6T;
 				INFOPLIST_FILE = GLOTraining01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,6 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 542EU4SW6T;
 				INFOPLIST_FILE = GLOTraining01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

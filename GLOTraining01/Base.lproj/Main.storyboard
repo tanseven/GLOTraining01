@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X5e-k5-NGK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="bui-e0-hHa">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="X5e-k5-NGK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Czb-Jw-Z9J">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iJU-zu-YbA" kind="relationship" relationship="rootViewController" id="tkg-5g-XTf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ME-Mo-gyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-642" y="122"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IDj-ni-F2U">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="iJU-zu-YbA" customClass="ViewController" customModule="GLOWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2DU-aH-eXH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fum-wN-A6S">
+                                <rect key="frame" x="20" y="108" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="f2z-U2-QYU"/>
+                                </constraints>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <segue destination="gdx-9a-Xyw" kind="show" id="md3-Ve-dw6"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-Q1-SdZ">
+                                <rect key="frame" x="20" y="176" width="374" height="686"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="VB2-I0-Gut">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VB2-I0-Gut" id="jW9-HQ-Oci">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fum-wN-A6S" firstAttribute="top" secondItem="N6l-qe-9EN" secondAttribute="top" constant="20" id="BhQ-Vj-2pB"/>
+                            <constraint firstItem="N6l-qe-9EN" firstAttribute="trailing" secondItem="Tv3-Q1-SdZ" secondAttribute="trailing" constant="20" id="IxB-Nx-MfK"/>
+                            <constraint firstItem="Tv3-Q1-SdZ" firstAttribute="bottom" secondItem="N6l-qe-9EN" secondAttribute="bottom" id="Qy3-eF-LTm"/>
+                            <constraint firstItem="Tv3-Q1-SdZ" firstAttribute="top" secondItem="Fum-wN-A6S" secondAttribute="bottom" constant="8" id="bIR-Y4-DVx"/>
+                            <constraint firstItem="N6l-qe-9EN" firstAttribute="trailing" secondItem="Fum-wN-A6S" secondAttribute="trailing" constant="20" id="kMJ-LQ-zMr"/>
+                            <constraint firstItem="Fum-wN-A6S" firstAttribute="leading" secondItem="N6l-qe-9EN" secondAttribute="leading" constant="20" id="nQf-zw-Hhe"/>
+                            <constraint firstItem="Tv3-Q1-SdZ" firstAttribute="leading" secondItem="N6l-qe-9EN" secondAttribute="leading" constant="20" id="oOT-Sc-KHK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N6l-qe-9EN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cSn-GH-J9m"/>
+                    <connections>
+                        <outlet property="scanButton" destination="Fum-wN-A6S" id="y3k-mQ-OF1"/>
+                        <outlet property="tableView" destination="Tv3-Q1-SdZ" id="yid-6I-ky3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taJ-tC-QkN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
+        </scene>
+        <!--Scan Lottery View Controller-->
+        <scene sceneID="1ae-y6-11H">
+            <objects>
+                <viewController storyboardIdentifier="ScanLotteryViewController" id="gdx-9a-Xyw" customClass="ScanLotteryViewController" customModule="GLOWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLV-qS-mIb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-yQ-LDf" customClass="QRCodeReaderView" customModule="GLOWorkshop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LXG-yQ-LDf" firstAttribute="trailing" secondItem="e6q-tw-T2d" secondAttribute="trailing" id="Syf-EH-MuW"/>
+                            <constraint firstItem="LXG-yQ-LDf" firstAttribute="top" secondItem="e6q-tw-T2d" secondAttribute="top" id="hP2-2r-UUz"/>
+                            <constraint firstItem="LXG-yQ-LDf" firstAttribute="leading" secondItem="e6q-tw-T2d" secondAttribute="leading" id="rHx-8A-jGE"/>
+                            <constraint firstAttribute="bottom" secondItem="LXG-yQ-LDf" secondAttribute="bottom" id="v2T-CC-JPV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e6q-tw-T2d"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K1g-s0-ymu"/>
+                    <connections>
+                        <outlet property="barCodeView" destination="LXG-yQ-LDf" id="3J2-Hx-zCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnp-o8-z67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="121.875"/>
         </scene>
     </scenes>
 </document>
