@@ -73,9 +73,7 @@ class ViewController: UIViewController {
 		]
 		
 		let headers : HTTPHeaders = [
-			"requestId" : UUID().uuidString
-			, "appId" : "GENERAL_IOS_APP"
-			, "operation" : "getLotteryResult"
+			"appId" : "GENERAL_IOS_APP"
 		]
 		
 		IHProgressHUD.show()
