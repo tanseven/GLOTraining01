@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X5e-k5-NGK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,23 +27,13 @@
         <!--View Controller-->
         <scene sceneID="IDj-ni-F2U">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="iJU-zu-YbA" customClass="ViewController" customModule="GLOWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="iJU-zu-YbA" customClass="ViewController" customModule="GLOTraining01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2DU-aH-eXH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fum-wN-A6S">
-                                <rect key="frame" x="20" y="108" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="f2z-U2-QYU"/>
-                                </constraints>
-                                <state key="normal" title="Scan"/>
-                                <connections>
-                                    <segue destination="gdx-9a-Xyw" kind="show" id="md3-Ve-dw6"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-Q1-SdZ">
-                                <rect key="frame" x="20" y="176" width="374" height="686"/>
+                                <rect key="frame" x="20" y="179" width="374" height="683"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="VB2-I0-Gut">
@@ -55,21 +46,58 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="giV-nq-SfT">
+                                <rect key="frame" x="20" y="137" width="322" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="งวดวันที่ 1 กันยายน 2562" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1q-PW-iCx">
+                                <rect key="frame" x="20" y="108" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-wn-rVI">
+                                <rect key="frame" x="350" y="139" width="44" height="30"/>
+                                <state key="normal" title="Check"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Fum-wN-A6S" firstAttribute="top" secondItem="N6l-qe-9EN" secondAttribute="top" constant="20" id="BhQ-Vj-2pB"/>
+                            <constraint firstItem="N6l-qe-9EN" firstAttribute="trailing" secondItem="p1q-PW-iCx" secondAttribute="trailing" constant="20" id="Bd8-oh-sh3"/>
+                            <constraint firstItem="giV-nq-SfT" firstAttribute="leading" secondItem="N6l-qe-9EN" secondAttribute="leading" constant="20" id="Ghc-Mu-EM6"/>
                             <constraint firstItem="N6l-qe-9EN" firstAttribute="trailing" secondItem="Tv3-Q1-SdZ" secondAttribute="trailing" constant="20" id="IxB-Nx-MfK"/>
+                            <constraint firstItem="giV-nq-SfT" firstAttribute="top" secondItem="p1q-PW-iCx" secondAttribute="bottom" constant="8" id="KHw-Go-v9h"/>
                             <constraint firstItem="Tv3-Q1-SdZ" firstAttribute="bottom" secondItem="N6l-qe-9EN" secondAttribute="bottom" id="Qy3-eF-LTm"/>
-                            <constraint firstItem="Tv3-Q1-SdZ" firstAttribute="top" secondItem="Fum-wN-A6S" secondAttribute="bottom" constant="8" id="bIR-Y4-DVx"/>
-                            <constraint firstItem="N6l-qe-9EN" firstAttribute="trailing" secondItem="Fum-wN-A6S" secondAttribute="trailing" constant="20" id="kMJ-LQ-zMr"/>
-                            <constraint firstItem="Fum-wN-A6S" firstAttribute="leading" secondItem="N6l-qe-9EN" secondAttribute="leading" constant="20" id="nQf-zw-Hhe"/>
+                            <constraint firstItem="p1q-PW-iCx" firstAttribute="leading" secondItem="N6l-qe-9EN" secondAttribute="leading" constant="20" id="Tqx-nz-NiO"/>
+                            <constraint firstItem="Tv3-Q1-SdZ" firstAttribute="top" secondItem="giV-nq-SfT" secondAttribute="bottom" constant="8" id="b9f-go-Vcu"/>
                             <constraint firstItem="Tv3-Q1-SdZ" firstAttribute="leading" secondItem="N6l-qe-9EN" secondAttribute="leading" constant="20" id="oOT-Sc-KHK"/>
+                            <constraint firstItem="N6l-qe-9EN" firstAttribute="trailing" secondItem="fOs-wn-rVI" secondAttribute="trailing" constant="20" id="r8y-bf-YIL"/>
+                            <constraint firstItem="p1q-PW-iCx" firstAttribute="top" secondItem="N6l-qe-9EN" secondAttribute="top" constant="20" id="v7e-9B-OpW"/>
+                            <constraint firstItem="fOs-wn-rVI" firstAttribute="centerY" secondItem="giV-nq-SfT" secondAttribute="centerY" id="xCG-zr-jTo"/>
+                            <constraint firstItem="fOs-wn-rVI" firstAttribute="leading" secondItem="giV-nq-SfT" secondAttribute="trailing" constant="8" id="ysH-r0-hYM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N6l-qe-9EN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cSn-GH-J9m"/>
+                    <navigationItem key="navigationItem" id="cSn-GH-J9m">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="xL5-Pz-UhG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fum-wN-A6S">
+                                <rect key="frame" x="327" y="0.0" width="67" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="f2z-U2-QYU"/>
+                                </constraints>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <segue destination="gdx-9a-Xyw" kind="show" id="md3-Ve-dw6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="checkButton" destination="fOs-wn-rVI" id="cEh-ux-Kuz"/>
+                        <outlet property="dateLabel" destination="p1q-PW-iCx" id="yAD-kd-tIA"/>
+                        <outlet property="lotteryTextField" destination="giV-nq-SfT" id="FDE-4s-i4h"/>
                         <outlet property="scanButton" destination="Fum-wN-A6S" id="y3k-mQ-OF1"/>
                         <outlet property="tableView" destination="Tv3-Q1-SdZ" id="yid-6I-ky3"/>
                     </connections>
@@ -81,12 +109,12 @@
         <!--Scan Lottery View Controller-->
         <scene sceneID="1ae-y6-11H">
             <objects>
-                <viewController storyboardIdentifier="ScanLotteryViewController" id="gdx-9a-Xyw" customClass="ScanLotteryViewController" customModule="GLOWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanLotteryViewController" id="gdx-9a-Xyw" customClass="ScanLotteryViewController" customModule="GLOTraining01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLV-qS-mIb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-yQ-LDf" customClass="QRCodeReaderView" customModule="GLOWorkshop" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-yQ-LDf" customClass="QRCodeReaderView" customModule="GLOTraining01" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>

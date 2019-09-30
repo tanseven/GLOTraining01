@@ -14,7 +14,10 @@ import IHProgressHUD
 class ViewController: UIViewController {
 	
 	@IBOutlet weak var scanButton: UIButton!
+	@IBOutlet weak var checkButton: UIButton!
+	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var lotteryTextField: UITextField!
 	
 	let sessionManager = SessionManager.default
 	var dataJSON : JSON = JSON.null
@@ -50,6 +53,10 @@ class ViewController: UIViewController {
 		
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
+		
+		self.checkButton.addTarget(self, action: #selector(self.checkButtonDidTap(_:)), for: .touchUpInside)
+		
+		self.lotteryTextField.delegate = self
 		
 		self.loadLottery()
 		
@@ -105,6 +112,118 @@ class ViewController: UIViewController {
 				
 			}
 			
+		}
+		
+	}
+	
+	func checkLottery(numberString : String) {
+		
+		let urlString = "https://hq-api-dev-01.glo.or.th/lotterycheck/number/check"
+		
+		let parameters : [String:Any] = [
+			"number" : [
+				[
+					"lottery_num" : numberString
+				]
+			]
+			, "date" : "01"
+			, "month" : "09"
+			, "year" : "2019"
+		]
+		
+		let headers : HTTPHeaders = [
+			"appId" : "GENERAL_IOS_APP"
+		]
+		
+		IHProgressHUD.show()
+		
+		self.sessionManager.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+			
+			IHProgressHUD.dismiss()
+			
+			if let htmlStatusCode : Int = response.response?.statusCode {
+				if htmlStatusCode == 200 {
+					switch response.result {
+					case .success:
+						if let jsonResponse = response.result.value {
+							let json = JSON(jsonResponse)
+							switch (json["responseStatus"]["code"].stringValue) {
+							case "00000":
+								print(json["result"])
+								if let data = json["result"].arrayValue.first {
+									let type = data["statusType"].intValue
+									let rewards : JSON = data["status_data"]
+									var rewardString = ""
+									if let reward = rewards.arrayValue.first {
+										rewardString = "\(reward["reward"].stringValue)"
+									}
+									
+									switch type {
+									case 0:
+										self.showAlert(title: "ผลการตรวจรางวัล", message: "ไม่พบข้อมูล")
+										break
+									case 1:
+										self.showAlert(title: "ผลการตรวจรางวัล", message: "ถูกรางวัล\n\(rewardString)")
+										break
+									case 2:
+										self.showAlert(title: "ผลการตรวจรางวัล", message: "ไม่ถูกรางวัล")
+										break
+									case 3:
+										self.showAlert(title: "ผลการตรวจรางวัล", message: "สลากแจ้งหาย")
+										break
+									case 4:
+										self.showAlert(title: "ผลการตรวจรางวัล", message: "ถูกรางวัล(สลากแจ้งหาย)\n\(rewardString)")
+										break
+									default:
+										break
+									}
+									
+								}
+								break
+							default:
+								break
+							}
+						}
+						break
+					case .failure(_):
+						
+						break
+					default:
+						break
+						
+					}
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	// MARK: -
+	
+	func showAlert(title:String = "", message:String = "") {
+		let alert = UIAlertController(
+			title: title,
+			message: message,
+			preferredStyle: .alert
+		)
+		alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (alert) in
+			
+		}))
+		self.present(alert, animated: true, completion: nil)
+	}
+	
+	// MARK: -
+	
+	@IBAction func checkButtonDidTap(_ sender : Any) {
+		
+		self.lotteryTextField.resignFirstResponder()
+		
+		if let text = self.lotteryTextField.text, text.count == 6 {
+			self.checkLottery(numberString: text)
+		}else{
+			self.showAlert(title: "", message: "กรุณาใส่เลขสลากให้ถูกต้อง")
 		}
 		
 	}
@@ -213,6 +332,30 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
 			return 5
 		}
 		return 0
+	}
+	
+}
+
+extension ViewController : UITextFieldDelegate {
+	
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		
+		if (string == "\\b") {
+			print("Backspace was pressed")
+			return true
+		}
+		
+		if let text = textField.text as NSString? {
+		let newString = text.replacingCharacters(in: range, with: string)
+			
+			if newString.count > 6 {
+				return false
+			}
+			
+		}
+		
+		return true
+		
 	}
 	
 }
