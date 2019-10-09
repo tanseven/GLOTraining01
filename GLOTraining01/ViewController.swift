@@ -37,17 +37,17 @@ class ViewController: UIViewController {
 	
 	func setupUI() {
 		
-		self.sessionManager.session.configuration.timeoutIntervalForRequest = 60
-		self.sessionManager.delegate.sessionDidReceiveChallenge = { session, challenge in
-			var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
-			var credential: URLCredential?
-			
-			credential = self.sessionManager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
-			if credential != nil {
-				disposition = .cancelAuthenticationChallenge
-			}
-			return (disposition, credential)
-		}
+//		self.sessionManager.session.configuration.timeoutIntervalForRequest = 60
+//		self.sessionManager.delegate.sessionDidReceiveChallenge = { session, challenge in
+//			var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
+//			var credential: URLCredential?
+//			
+//			credential = self.sessionManager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
+//			if credential != nil {
+//				disposition = .cancelAuthenticationChallenge
+//			}
+//			return (disposition, credential)
+//		}
 		
 		self.tableView.tableFooterView = UIView()
 		
